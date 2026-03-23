@@ -1,7 +1,7 @@
 export default function Home(){
     return(
         <>
-        <header> 
+        <header className="container"> 
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                <div class="container-fluid">
                   <div class="collapse navbar-collapse" id="navbarNav">
@@ -21,7 +21,7 @@ export default function Home(){
             </nav>
         </header>
 
-        <main>
+        <main className="container">
             <h1>BENVENUTO!</h1>
             <img src="https://nuvoluzione.com/wp-content/uploads/2016/03/vendita-promozionale.jpg" alt="img promozionale" />
 

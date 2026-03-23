@@ -37,23 +37,24 @@ export default function Products() {
 
       <main className="container">
         <div>
-          <h2>Lista Prodotti</h2>
-            <ul>
-              {todos.map((product) => (
-                <li key={product.id}>
-                   <img src={product.image} alt={product.title} width="100" />
-                   <br/>
-                   {product.title} - {product.price} €  
-                   <br />
-                   {product.description}  
-                   <br />
-                   Categoria: {product.category}  
-                   <br />
-                    Rating: {product.rating.rate}-({product.rating.count} recensioni)
-                </li>
-            ))}
-            </ul>
+          <h2 className="text-center mb-4">Lista Prodotti</h2>
         </div>
+
+        <div className="d-flex flex-wrap justify-content-center">
+            {todos.map((product) => (
+                <div key={product.id} className="card m-2">
+                   <img src={product.image} className="dimensione"/>
+                    <div className="card-body">
+                        <h3 className="card-title">{product.title}</h3>
+                        <p className="card-text"><strong>Prezzo:</strong> {product.price} €</p>
+                        <p className="card-text">{product.category}</p>
+                        <p className="card-text">Rating: {product.rating.rate} ⭐ ({product.rating.count} recensioni)</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+  
+       
       </main>
     </>
   );

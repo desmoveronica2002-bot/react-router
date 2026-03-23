@@ -1,7 +1,7 @@
 export default function Presentazione(){
     return(
         <>
-        <header> 
+        <header className="container"> 
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                <div class="container-fluid">
                   <div class="collapse navbar-collapse" id="navbarNav">
@@ -21,7 +21,7 @@ export default function Presentazione(){
             </nav>
         </header>
 
-        <main>
+        <main className="container"> 
             <h1>CHI SIAMO!</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sapiente 
             dolores ipsum ipsa? Minima assumenda dolores quod minus aspernatur ducimus?
