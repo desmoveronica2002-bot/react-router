@@ -8,7 +8,6 @@ export default function Products() {
   function fetchTodos() {
     axios.get("https://fakestoreapi.com/products")
       .then((res) => setTodos(res.data))
-      .catch((err) => console.log(err));
   }
   useEffect(() => {
     fetchTodos();
@@ -16,7 +15,7 @@ export default function Products() {
 
   return (
     <>
-      <header>
+      <header className="container">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <div className="collapse navbar-collapse" id="navbarNav">
@@ -36,14 +35,24 @@ export default function Products() {
         </nav>
       </header>
 
-      <main>
+      <main className="container">
         <div>
           <h2>Lista Prodotti</h2>
-          <ul>
-            {todos.map((todo) => (
-              <li key={todo.id}>{todo.title}</li>
+            <ul>
+              {todos.map((product) => (
+                <li key={product.id}>
+                   <img src={product.image} alt={product.title} width="100" />
+                   <br/>
+                   {product.title} - {product.price} €  
+                   <br />
+                   {product.description}  
+                   <br />
+                   Categoria: {product.category}  
+                   <br />
+                    Rating: {product.rating.rate}-({product.rating.count} recensioni)
+                </li>
             ))}
-          </ul>
+            </ul>
         </div>
       </main>
     </>
