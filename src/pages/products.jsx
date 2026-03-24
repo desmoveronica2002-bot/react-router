@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Products() {
   const [todos, setTodos] = useState([]);
@@ -16,18 +17,18 @@ export default function Products() {
   return (
     <>
       <header className="container"> 
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-               <div class="container-fluid">
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                   <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+               <div className="container-fluid">
+                  <div className="collapse navbar-collapse" id="navbarNav">
+                   <ul className="navbar-nav">
+                      <li className="nav-item">
+                        <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                       </li>
-                      <li class="nav-item">
-                        <Link class="nav-link" to="/presentazione">chi siamo</Link>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/presentazione">chi siamo</Link>
                       </li>
-                      <li class="nav-item">
-                        <Link class="nav-link" to="products">prodotti</Link>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/products">prodotti</Link>
                       </li>
                     </ul>
                   </div>
