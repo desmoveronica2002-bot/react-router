@@ -47,9 +47,6 @@ export default function Products() {
                    <img src={product.image} className="dimensione"/>
                     <div className="card-body">
                         <h3 className="card-title">{product.title}</h3>
-                        <p className="card-text"><strong>Prezzo:</strong> {product.price} €</p>
-                        <p className="card-text">{product.category}</p>
-                        <p className="card-text">Rating: {product.rating.rate} ⭐ ({product.rating.count} recensioni)</p>
                         <Link to={`/products/${product.id}`}>Vedi prodotto</Link>
                     </div>
                 </div>

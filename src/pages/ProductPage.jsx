@@ -48,7 +48,9 @@ export default function ProductPage(){
                 <div>
                     <img src={product.image}></img>
                     <h1>{product.title}</h1>
-
+                    <p className="card-text"><strong>Prezzo:</strong> {product.price} €</p>
+                    <p className="card-text">{product.category}</p>
+                    <p className="card-text">Rating: {product.rating.rate} ⭐ ({product.rating.count} recensioni)</p>
                 </div>
 
             )}
