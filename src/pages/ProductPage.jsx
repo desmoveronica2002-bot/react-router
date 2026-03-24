@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { data, useParams } from "react-router-dom"
 
 export default function ProductPage(){
+
+    const [product, setProduct]=useState(null)
 
     const {id} = useParams()
     console.log(id);
@@ -12,13 +14,11 @@ export default function ProductPage(){
     useEffect(()=>{
         fetch(api_url)
         .then(res=>res.json())
-        .then(data=>{
-            console.log(data);
-        })
+        .then(data=>setProduct(data))
 
     },[])
 
     return(
-        <h1>product : id</h1>
+        <h1>product : {id}</h1>
     )
 }
