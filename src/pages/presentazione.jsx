@@ -7,13 +7,13 @@ export default function Presentazione(){
                   <div class="collapse navbar-collapse" id="navbarNav">
                    <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <Link class="nav-link active" aria-current="page" to="/">Home</Link>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="/presentazione">chi siamo</a>
+                        <Link class="nav-link" to="/presentazione">chi siamo</Link>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="products">prodotti</a>
+                        <Link class="nav-link" to="products">prodotti</Link>
                       </li>
                     </ul>
                   </div>
