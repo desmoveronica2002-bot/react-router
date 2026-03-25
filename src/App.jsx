@@ -4,6 +4,9 @@ import Presentazione from "./pages/presentazione";
 import Products from "./pages/products";
 import ProductPage from "./pages/ProductPage";
 import BudgetContext from "./contexts/BudgetContext";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+
 
 function App() {
   const [budgetMode, setBudgetMode] = useState(false);
@@ -14,7 +17,8 @@ function App() {
     <BudgetContext.Provider value={{ budgetMode, setBudgetMode }}>
 
     <BrowserRouter>
-      <Routes> 
+      <Navbar />
+      <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/presentazione" element={<Presentazione/>}/>
         <Route path="/products" element={<Products/>}/>
