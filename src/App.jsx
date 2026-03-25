@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import Presentazione from "./pages/presentazione";
 import Products from "./pages/products";
 import ProductPage from "./pages/ProductPage";
+import BudgetContext from "./contexts/BudgetContext";
 
 function App() {
 
